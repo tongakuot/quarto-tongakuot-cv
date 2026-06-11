@@ -9,6 +9,9 @@ refactored into the `quarto-tongakuot-cv` extension package (June 2026).
 
 ![Rendered starter template — PyStatR+ aesthetic](images/template-preview.png)
 
+> ⭐ **Star this repo on GitHub if you love it and find it useful** — it
+> helps others discover the template. Forks and adaptations are welcome.
+
 ## Files
 
 | File | Purpose |
@@ -115,3 +118,17 @@ bg     #FAFBFC    page background
 1. Edit `areng_resume.qmd` (content) or the extension files (design).
 2. `quarto render areng_resume.qmd`
 3. Collect the rendered PDF from `_output/` and submit.
+
+## Dependencies & Acknowledgments
+
+This package intentionally has **zero third-party Quarto extensions** —
+everything is built on tools that ship with Quarto:
+
+- **[Quarto](https://quarto.org)** (1.5+) — rendering engine and extension system.
+- **[Typst](https://typst.app)** — typesetting engine, bundled with Quarto; no LaTeX required.
+- **[pagedown](https://github.com/rstudio/pagedown)** — the RMarkdown package
+  behind the original version of this resume; this project's layout lineage
+  starts there.
+- Rebuilt as a Quarto extension with **Claude** in Anthropic's **Cowork**.
+
+⭐ If this template serves you well, star the repo — and share what you build.
