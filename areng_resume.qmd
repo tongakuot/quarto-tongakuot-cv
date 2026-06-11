@@ -1,0 +1,177 @@
+---
+name: Alier Reng
+headline: Healthcare Quality · Safety · Compliance Leader
+tagline: >-
+  Data-driven director with 9+ years across CMS quality programs,
+  NHSN safety reporting, and clinical operations analytics.
+email: alierwai254@gmail.com
+location: Louisville, KY · open to relocation
+linkedin: linkedin.com/in/tongakuot
+github: github.com/tongakuot
+resume-updated: June 2026
+format:
+  cv-typst:
+    keep-typ: true
+---
+
+```{=typst}
+// Toggle: set to true to include the Research & Publications section.
+#let include-publications = false
+
+// ============================================================================
+//  SUMMARY
+// ============================================================================
+#summary-block[
+  Healthcare quality and analytics leader with #text(weight: "bold", fill: pystatr-blue)[9+ years] partnering with Clinical Operations, Quality, and Care Management leaders to operationalize #text(weight: "bold", fill: pystatr-blue)[CMS quality programs] (VBP, HAC Reduction, MSPB), #text(weight: "bold", fill: pystatr-blue)[NHSN safety reporting], and the #text(weight: "bold", fill: pystatr-blue)[National Quality Strategy (NQS)] across multi-hospital systems. Recognized for rigorous data stewardship and translating complex measure specifications into actionable scorecards that improve quality and patient safety. LifePoint Health #text(weight: "bold", fill: pystatr-gold)[Mercy Award] recipient (2020).
+]
+
+// ============================================================================
+//  TWO-COLUMN BODY
+// ============================================================================
+#two-col(
+  // --- MAIN ---
+  [
+    #section-title[Professional Experience]
+
+    #entry(
+      "Regional Director, Quality & Safety Operations",
+      "LifePoint Health",
+      "Brentwood, TN · Remote",
+      "Jun 2026 — Present",
+      (
+        [Serve as #text(weight: "bold")[data architect] for inpatient acute care hospitals — designing the data structures, validation protocols, and pipelines behind quality analytics.],
+      )
+    )
+
+    #entry(
+      "Director, Analytics & Quality Reporting",
+      "ScionHealth",
+      "Louisville, KY",
+      "2022 — 2026",
+      (
+        [Lead data stewardship for quality and operational reporting across the #text(weight: "bold")[Community Hospitals Division] — designing initial and monthly data-validation protocols that protect the integrity of quality and safety metrics.],
+        [Partner with SMEs and Clinical Operations leaders to develop, document, and operationalize #text(weight: "bold")[National Quality Strategy (NQS)] measures — including specifications, calculation logic, and audit trails.],
+        [Author #text(weight: "bold")[Quality Measures Specifications] and field-level reporting instructions used by hospital quality and compliance leaders.],
+        [Compile and compress monthly #text(weight: "bold")[NQS Excel workbooks for 75+ hospitals enterprise-wide] with R and openpyxl — cutting production time from #text(weight: "bold", fill: pystatr-gold)[several days to \~4 hours] while improving accuracy and consistency.],
+        [Automate divisional Excel reporting with #text(weight: "bold")[Python (openpyxl)] — the #text(weight: "bold")[Apogee and TeamHealth GMLOS Variance] reports and the #text(weight: "bold")[Quality & Regulatory Outcomes HCAHPS and ED CAHPS trend] reports — strengthening accuracy and audit-readiness across patient-experience, safety, and utilization metrics.],
+        [Build #text(weight: "bold")[R Shiny] applications for monthly Operating Review (MOR) data — giving executive and frontline leaders interactive access to quality, safety, and throughput indicators.],
+      )
+    )
+
+    #entry(
+      "Senior Data Analyst, Quality Data",
+      "LifePoint Health",
+      "Brentwood, TN",
+      "2021 — 2022",
+      (
+        [Data stewardship: performed monthly data validation to ensure data accuracy before data was pushed to PowerBI for hospitals' use.],
+        [Supported and assisted hospitals and the HSC departments with their data needs.],
+        [Performed exploratory and predictive analysis with R and Python.],
+        [Created and modified divisions' and hospitals' #text(weight: "bold")[NHSN Goals, MOR, and QOC] reports and dashboards using R and PowerBI.],
+        [Onboarded and trained new team members.],
+      )
+    )
+
+    #entry(
+      "Data Analyst, Quality Data",
+      "LifePoint Health",
+      "Brentwood, TN",
+      "2016 — 2021",
+      (
+        [Cut #text(weight: "bold")[QOC and MOR] decks production time by #text(weight: "bold", fill: pystatr-gold)[80%] by automating reports with R Shiny.],
+        [Reduced data errors and optimized accuracy by automating #text(weight: "bold")[CHOIS monthly mortality] reports with R Shiny.],
+        [Used R to automate the CMS company-wide #text(weight: "bold")[VBP, HAC Penalty, and MSPB] reports extraction processes.],
+      )
+    )
+
+    #section-title[Teaching & Public Education]
+
+    #entry(
+      "Lecturer, Mathematics",
+      "Middle Tennessee State University",
+      "Murfreesboro, TN",
+      "2011 — 2016",
+      (
+        [Taught general mathematics courses — Plane Trigonometry, Applied Calculus I, Applied Statistics, Finite Mathematics, College Algebra, Mathematics for General Studies (Mathematical Ideas), and Pre-Calculus (Pathways to Calculus).],
+        [Turned 'F' students into 'A' and 'B' students through active and participatory learning; used hands-on approaches to help students conceptualize mathematical ideas and construct meaningful mathematical statements.],
+        [Helped challenged students replace negative thinking with positive-possibility mindsets through friendly coaching and mentorship.],
+      )
+    )
+
+    #if include-publications [
+      #section-title[Research & Publications]
+
+      #pub-entry(
+        "Publication Title Goes Here",
+        "Reng, A., Co-Author, B.",
+        "Journal or Venue Name",
+        "2026",
+      )
+    ]
+
+    #section-title[Leadership & Community]
+
+    #entry(
+      "Founder & Lead Educator",
+      "PyStatR+ — mission-driven data science education",
+      "Louisville, KY",
+      "2024 — Present",
+      (
+        [Founded the first South Sudanese-American, U.S.-based data science education initiative — delivering accessible education in data science, statistics, ML, and AI with a focused commitment to learners in South Sudan and East Africa.],
+        [Author open tutorials in R, Python, and statistics; publish across the PyStatR+ YouTube channel, Facebook community, Medium, and blog with reproducible Quarto notebooks.],
+        [Design and deliver group training programs (1-day, 5-day, 8-week) for students, professionals, NGOs, and government agencies — sharpening curriculum design, reproducibility, and technical communication skills.],
+      )
+    )
+  ],
+
+  // --- SIDEBAR ---
+  [
+    #sidebar-title[Quality & Compliance]
+
+    #v(0.1em)
+    #set list(indent: 0pt, body-indent: 0.35em, marker: text(fill: pystatr-gold)[▪])
+    - #text(size: 8.5pt)[CMS VBP · HAC Reduction · MSPB]
+    - #text(size: 8.5pt)[HCAHPS & ED CAHPS trend reporting]
+    - #text(size: 8.5pt)[NHSN safety & infection reporting]
+    - #text(size: 8.5pt)[National Quality Strategy (NQS)]
+    - #text(size: 8.5pt)[Quality Measures Specifications]
+    - #text(size: 8.5pt)[QOC, MOR, GMLOS variance]
+    - #text(size: 8.5pt)[Mortality (CHOIS) reporting]
+    - #text(size: 8.5pt)[Data stewardship & validation]
+    - #text(size: 8.5pt)[Audit-readiness & documentation]
+
+    #sidebar-title[Analytics & Tools]
+
+    #v(0.1em)
+    - #text(size: 8.5pt)[R · Python · SQL]
+    - #text(size: 8.5pt)[R Shiny · Shiny for Python]
+    - #text(size: 8.5pt)[openpyxl · Quarto · tidymodels]
+    - #text(size: 8.5pt)[PowerBI dashboards & DAX]
+    - #text(size: 8.5pt)[pandas · Polars · scikit-learn]
+    - #text(size: 8.5pt)[Positron · RStudio · VS Code]
+    - #text(size: 8.5pt)[JupyterLab · Git / GitHub · MS Office]
+
+    #sidebar-title[Leadership Strengths]
+
+    #v(0.1em)
+    - #text(size: 8.5pt)[Cross-functional partnership with Clinical Ops & Care Management]
+    - #text(size: 8.5pt)[Translating regulatory measures into operational dashboards]
+    - #text(size: 8.5pt)[Coaching, mentorship, and team development]
+    - #text(size: 8.5pt)[Executive-ready written communication]
+
+    #sidebar-title[Education]
+
+    #edu("MBA · Information Systems Management", "LeTourneau University", "Longview, TX", "2016 — 2017")
+    #edu("M.S. · Professional Science (Biostatistics)", "Middle Tennessee State University", "Murfreesboro, TN", "2009 — 2011")
+    #edu("B.S. · Neuroscience", "University of Texas at Dallas", "Richardson, TX", "2005 — 2008")
+
+    #v(0.6em)
+
+    #sidebar-title[Awards]
+
+    #award("Mercy Award · 2020", "LifePoint Health — quality mission contribution")
+    #award("LSAMP Scholarship · 2006–2007", "The University of Texas at Dallas")
+    #award("Vice President's List · 2005", "Richland College (DCCCD)")
+  ],
+)
+```

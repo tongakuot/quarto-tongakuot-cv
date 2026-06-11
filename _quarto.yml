@@ -1,0 +1,7 @@
+project:
+  title: "Alier Reng — Resume (Quarto + Typst)"
+  type: default
+  output-dir: _output
+
+# Render with:  quarto render areng_resume.qmd
+# Or compile typst directly:  typst compile areng_resume.typ Alier_Reng_Resume.pdf

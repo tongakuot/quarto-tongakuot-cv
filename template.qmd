@@ -1,0 +1,118 @@
+---
+name: Your Name
+headline: Your Professional Headline · Goes · Here
+tagline: >-
+  One-sentence positioning statement that appears under your headline
+  in the navy header band.
+email: you@example.com
+location: City, ST · open to relocation
+linkedin: linkedin.com/in/your-handle
+github: github.com/your-handle
+resume-updated: June 2026
+format:
+  cv-typst: default
+---
+
+```{=typst}
+// ----------------------------------------------------------------------------
+// Section toggles — set to false to turn a section off entirely.
+// ----------------------------------------------------------------------------
+#let include-publications = true
+
+// Summary — appears under the header band, above the two-column body.
+// Use pystatr-blue / pystatr-gold bold spans sparingly for emphasis.
+#summary-block[
+  Two to four sentences summarizing your value. Highlight
+  #text(weight: "bold", fill: pystatr-blue)[key programs or domains]
+  and one signature recognition like a
+  #text(weight: "bold", fill: pystatr-gold)[major award].
+]
+
+#two-col(
+  // --- MAIN COLUMN ---
+  [
+    #section-title[Professional Experience]
+
+    #entry(
+      "Role Title",
+      "Organization",
+      "City, ST",
+      "2022 — Present",
+      (
+        [First bullet — lead with the verb and the outcome; bold the #text(weight: "bold")[programs and systems] you owned.],
+        [Second bullet — quantify where you can: #text(weight: "bold", fill: pystatr-gold)[80% faster], 75+ sites, etc.],
+      )
+    )
+
+    #entry(
+      "Earlier Role",
+      "Organization",
+      "City, ST",
+      "2018 — 2022",
+      (
+        [What you built, ran, or improved.],
+      )
+    )
+
+    // Rendered only when include-publications is true (see toggle at top).
+    #if include-publications [
+      #section-title[Research & Publications]
+
+      #pub-entry(
+        "Title of the Paper or Article",
+        "Lastname, F., Co-Author, A.",
+        "Journal, Conference, or Publisher",
+        "2026",
+      )
+
+      #pub-entry(
+        "An Earlier Publication",
+        "Lastname, F.",
+        "Venue Name",
+        "2024",
+        note: "optional context, award, or DOI",
+      )
+    ]
+
+    #section-title[Leadership & Community]
+
+    #entry(
+      "Volunteer or Founder Role",
+      "Initiative Name",
+      "City, ST",
+      "2024 — Present",
+      (
+        [Community, mentorship, or open-source contributions.],
+      )
+    )
+  ],
+
+  // --- SIDEBAR ---
+  [
+    #sidebar-title[Core Competencies]
+
+    #v(0.1em)
+    #set list(indent: 0pt, body-indent: 0.35em, marker: text(fill: pystatr-gold)[▪])
+    - #text(size: 8.5pt)[Competency one]
+    - #text(size: 8.5pt)[Competency two]
+    - #text(size: 8.5pt)[Competency three]
+
+    #sidebar-title[Tools]
+
+    #v(0.1em)
+    - #text(size: 8.5pt)[Tool · Tool · Tool]
+    - #text(size: 8.5pt)[Tool · Tool]
+
+    #sidebar-title[Education]
+
+    #edu("Degree · Field", "University", "City, ST", "2009 — 2011")
+    #edu("Degree · Field", "University", "City, ST", "2005 — 2008")
+
+    #v(0.6em)
+
+    #sidebar-title[Awards]
+
+    #award("Award Name · Year", "Issuing organization — one-line context")
+  ],
+)
+```
