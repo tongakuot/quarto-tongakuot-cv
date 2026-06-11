@@ -34,6 +34,35 @@ Requires Quarto 1.5+ (bundled Typst engine). To publish, push this
 directory to GitHub as `tongakuot/quarto-tongakuot-cv` — `quarto use
 template` and `quarto add` work directly against the repo.
 
+## Adopting this template
+
+The only prerequisite is **Quarto 1.5+** — Typst ships inside Quarto, so
+there is no LaTeX and nothing else to install.
+
+**New CV from scratch:**
+
+1. Run `quarto use template tongakuot/quarto-tongakuot-cv` and name the
+   directory when prompted. Quarto scaffolds it with a starter `.qmd`
+   (renamed to match the directory) and the `_extensions/cv/` format.
+2. Replace the placeholder YAML — `name`, `headline`, `tagline`, `email`,
+   `location`, `linkedin`, `github` (see *YAML options* below).
+3. Fill in the body using the helpers — `entry()` for roles, `edu()` for
+   degrees, `award()` for honors, `pub-entry()` for publications (see
+   *Helpers available in the body*).
+4. Flip the toggles for sections that don't apply, e.g.
+   `#let include-publications = false` (see *Section toggles*).
+5. `quarto render your-cv.qmd` — the PDF lands in `_output/`.
+
+**Existing project:** run `quarto add tongakuot/quarto-tongakuot-cv`, then
+set `format: cv-typst` in the document YAML.
+
+**Pinning a version:** install against a tagged release for reproducible
+setups — `quarto add tongakuot/quarto-tongakuot-cv@v1.0.0`. (Maintainer:
+`git tag v1.0.0 && git push --tags`.)
+
+The design lives entirely in `_extensions/cv/`; documents carry content
+only. Update the format later with `quarto update tongakuot/quarto-tongakuot-cv`.
+
 ## Section toggles
 
 The body of each document begins with toggles you can flip:
