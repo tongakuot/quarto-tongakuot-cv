@@ -7,6 +7,8 @@ as an installable Typst-based extension, plus Alier Reng's resume built on it.
 Originally converted from a `pagedown` RMarkdown resume to Quarto + Typst;
 refactored into the `quarto-tongakuot-cv` extension package (June 2026).
 
+![Rendered starter template — PyStatR+ aesthetic](images/template-preview.png)
+
 ## Files
 
 | File | Purpose |
