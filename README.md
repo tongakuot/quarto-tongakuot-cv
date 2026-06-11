@@ -14,8 +14,7 @@ refactored into the `quarto-tongakuot-cv` extension package (June 2026).
 | `_extensions/cv/` | The extension: `_extension.yml`, `typst-template.typ` (palette, helpers, layout), `typst-show.typ` (YAML → template mapping). |
 | `template.qmd` | Generic starter CV for new users of the format. |
 | `areng_resume.qmd` | Alier's resume — content only; all styling comes from the extension. |
-| `areng_resume.typ` | Legacy standalone Typst source (pre-package). Kept for reference; no longer the source of truth. |
-| `Alier_Reng_Resume.pdf` | Final, application-ready resume (US Letter). |
+| `areng_resume.typ` | Quarto-generated Typst intermediate (`keep-typ: true`); not hand-edited. |
 | `_quarto.yml` | Quarto project config. |
 
 ## Using the format
@@ -84,4 +83,4 @@ bg     #FAFBFC    page background
 
 1. Edit `areng_resume.qmd` (content) or the extension files (design).
 2. `quarto render areng_resume.qmd`
-3. Replace `Alier_Reng_Resume.pdf` from `_output/` and submit.
+3. Collect the rendered PDF from `_output/` and submit.
