@@ -7,7 +7,25 @@ as an installable Typst-based extension, plus Alier Reng's resume built on it.
 Originally converted from a `pagedown` RMarkdown resume to Quarto + Typst;
 refactored into the `quarto-tongakuot-cv` extension package (June 2026).
 
-![Rendered starter template — PyStatR+ aesthetic](images/template-preview.png)
+## Templates
+
+### US / International (`template.qmd`)
+
+Standard two-column layout — name, headline, tagline, email, location,
+LinkedIn, GitHub, website. US Letter paper.
+
+![Rendered starter template — PyStatR+ US / International version](images/template-preview.png)
+
+### South Sudan / East Africa (`template-south-sudan.qmd`)
+
+Same layout extended with a **personal details band** that renders the fields
+standard on CVs in South Sudan, Kenya, Uganda, Ethiopia, and most of East Africa:
+Date of Birth · Sex · Nationality · Marital Status · Region/State · Religion · ID No.
+Also adds: phone in the contact block, Education section first (recommended for
+government and NGO applications), Languages as a prominent sidebar section,
+and a References section. A4 paper.
+
+![Rendered starter template — South Sudan / East Africa version](images/template-south-sudan-preview.png)
 
 > ⭐ **Star this repo on GitHub if you love it and find it useful** — it
 > helps others discover the template. Forks and adaptations are welcome.
@@ -17,7 +35,8 @@ refactored into the `quarto-tongakuot-cv` extension package (June 2026).
 | File | Purpose |
 |---|---|
 | `_extensions/cv/` | The extension: `_extension.yml`, `typst-template.typ` (palette, helpers, layout), `typst-show.typ` (YAML → template mapping). |
-| `template.qmd` | Generic starter CV for new users of the format. |
+| `template.qmd` | Generic starter CV — US / international format. US Letter paper. |
+| `template-south-sudan.qmd` | Starter CV for South Sudan and East Africa — A4 paper, personal details band, Education first, Languages, References. |
 | `areng_resume.qmd` | Alier's resume — content only; all styling comes from the extension. |
 | `areng_resume.typ` | Quarto-generated Typst intermediate (`keep-typ: true`); not hand-edited. |
 | `_quarto.yml` | Quarto project config. |
@@ -87,9 +106,20 @@ one keystroke if it doesn't apply.
 | `name` | Name in the header band (rendered uppercase) and page footer. |
 | `headline` | Gold all-caps line under the name. |
 | `tagline` | Light one-liner under the headline. |
-| `email`, `location`, `linkedin`, `github`, `website` | Right-hand contact block; links generated automatically. All optional. |
+| `email` | Right-hand contact block — rendered as a mailto link. |
+| `phone` | Phone number in the contact block (plain text). |
+| `location`, `linkedin`, `github`, `website` | Additional contact block items; links auto-generated. All optional. |
 | `summary` | Optional plain-markdown summary. For styled emphasis, use `#summary-block[...]` in the body instead. |
 | `resume-updated` | "Updated …" stamp in the page footer. |
+| `papersize` | Typst paper size — `us-letter` (default) or `a4` (recommended for South Sudan / East Africa). |
+| **South Sudan / East Africa fields** | |
+| `dob` | Date of Birth — shown in the personal details band. |
+| `sex` | Sex / Gender — shown in the personal details band. |
+| `nationality` | Nationality — shown in the personal details band. |
+| `marital-status` | Marital status — shown in the personal details band. |
+| `region` | Region or state of origin — shown in the personal details band. |
+| `religion` | Religion — shown in the personal details band (optional; include if relevant to the role). |
+| `id-number` | National ID or passport number — shown in the personal details band. |
 
 ## Helpers available in the body
 
