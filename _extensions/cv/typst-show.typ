@@ -11,6 +11,9 @@ $endif$
 $if(email)$
   email: "$email$",
 $endif$
+$if(phone)$
+  phone: [$phone$],
+$endif$
 $if(location)$
   location: [$location$],
 $endif$
@@ -22,6 +25,27 @@ $if(github)$
 $endif$
 $if(website)$
   website: "$website$",
+$endif$
+$if(dob)$
+  dob: [$dob$],
+$endif$
+$if(sex)$
+  sex: [$sex$],
+$endif$
+$if(nationality)$
+  nationality: [$nationality$],
+$endif$
+$if(marital-status)$
+  marital-status: [$marital-status$],
+$endif$
+$if(region)$
+  region: [$region$],
+$endif$
+$if(religion)$
+  religion: [$religion$],
+$endif$
+$if(id-number)$
+  id-number: [$id-number$],
 $endif$
 $if(summary)$
   summary: [$summary$],

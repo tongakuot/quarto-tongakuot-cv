@@ -125,16 +125,64 @@
   sidebar,
 )
 
+// ----- personal details band (Africa / South Sudan variant) ------------------
+// Renders a compact strip below the header when any Africa-specific field is set.
+// All parameters are optional; the band is hidden when none are provided.
+#let personal-details-band(
+  dob: none,
+  sex: none,
+  nationality: none,
+  marital-status: none,
+  region: none,
+  religion: none,
+  id-number: none,
+) = {
+  let items = ()
+  if dob != none          { items += (("Date of Birth", dob),) }
+  if sex != none          { items += (("Sex", sex),) }
+  if nationality != none  { items += (("Nationality", nationality),) }
+  if marital-status != none { items += (("Marital Status", marital-status),) }
+  if region != none       { items += (("Region / State", region),) }
+  if religion != none     { items += (("Religion", religion),) }
+  if id-number != none    { items += (("ID No.", id-number),) }
+
+  if items.len() > 0 {
+    let rendered = items.map(pair => {
+      let (lbl, val) = pair
+      box[#text(size: 7.6pt, weight: "bold", fill: pystatr-gold, tracking: 0.03em)[#upper(lbl)]#h(0.22em)#text(size: 8.0pt, fill: pystatr-ink)[#val]]
+    }).join([#h(0.6em)#text(size: 8pt, fill: pystatr-steel)[·]#h(0.6em)])
+
+    v(0.3em)
+    block(
+      fill: pystatr-light,
+      inset: (x: 14pt, y: 7pt),
+      radius: 2pt,
+      width: 100%,
+      below: 0.3em,
+    )[#rendered]
+    v(0.25em)
+  }
+}
+
 // ----- the resume template ---------------------------------------------------
 #let resume(
   name: none,
   headline: none,
   tagline: none,
   email: none,
+  phone: none,
   location: none,
   linkedin: none,
   github: none,
   website: none,
+  // Africa / South Sudan personal details (optional — band hidden when all none)
+  dob: none,
+  sex: none,
+  nationality: none,
+  marital-status: none,
+  region: none,
+  religion: none,
+  id-number: none,
   summary: none,
   updated: none,
   paper: "us-letter",
@@ -185,6 +233,9 @@
           #if email != none [
             #text(fill: pystatr-gold-light, weight: "semibold")[#link("mailto:" + email)[#email]] \
           ]
+          #if phone != none [
+            #text(fill: pystatr-light)[#phone] \
+          ]
           #if location != none [
             #text(fill: pystatr-light)[#location] \
           ]
@@ -202,7 +253,18 @@
     )
   ]
 
-  v(0.45em)
+  // ----- Africa / South Sudan personal details band (hidden when all none) ----
+  personal-details-band(
+    dob: dob,
+    sex: sex,
+    nationality: nationality,
+    marital-status: marital-status,
+    region: region,
+    religion: religion,
+    id-number: id-number,
+  )
+
+  v(0.3em)
 
   // ----- optional metadata-driven summary -------------------------------------
   if summary != none {

@@ -1,0 +1,186 @@
+---
+# ── IDENTITY ──────────────────────────────────────────────────────────────────
+name: Your Full Name
+headline: Your Professional Title · Field · Area of Expertise
+tagline: >-
+  One-sentence positioning statement that appears under your headline.
+
+# ── CONTACT ───────────────────────────────────────────────────────────────────
+email: you@example.com
+phone: "+211 9XX XXX XXX"            # Mobile number (common in South Sudan / EA)
+location: Juba, South Sudan
+
+# Optional online presence (remove lines you don't need)
+linkedin: linkedin.com/in/your-handle
+github: github.com/your-handle
+# website: yourwebsite.com
+
+# ── SOUTH SUDAN / EAST AFRICA PERSONAL DETAILS ────────────────────────────────
+# These fields are standard on CVs in South Sudan, Kenya, Uganda, Ethiopia,
+# and most of East Africa. Remove any field you prefer to omit.
+dob: "1 January 1990"               # Date of Birth
+sex: Male                            # Male / Female
+nationality: South Sudanese
+marital-status: Single               # Single / Married / Divorced / Widowed
+region: Greater Equatoria            # State or region of origin in South Sudan
+religion: Christian                  # Optional — include if relevant to the role
+id-number: "SS-XXXXXXXXXX"          # National ID or Passport number (optional)
+
+# ── FORMAT ────────────────────────────────────────────────────────────────────
+papersize: a4                        # A4 is standard in South Sudan and East Africa
+resume-updated: June 2026
+format:
+  cv-typst: default
+---
+
+```{=typst}
+// ─────────────────────────────────────────────────────────────────────────────
+//  Section toggles — set to false to turn a section off entirely.
+// ─────────────────────────────────────────────────────────────────────────────
+#let include-publications = false
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  PROFESSIONAL PROFILE / OBJECTIVE
+//  In South Sudan and East Africa CVs this section is often called
+//  "Professional Profile" or "Career Objective". Keep it concise (3–4 lines).
+// ─────────────────────────────────────────────────────────────────────────────
+#summary-block[
+  Briefly describe your professional identity, years of experience, and
+  the #text(weight: "bold", fill: pystatr-blue)[sectors or domains] you have worked in.
+  Mention one or two signature strengths and the kind of impact you create.
+  End with what you are seeking or what you can contribute to the hiring organization.
+]
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  TWO-COLUMN BODY
+//  NOTE: In many South Sudan / East Africa CVs, Education comes FIRST.
+//  If applying to government, NGO, or academic positions, move the Education
+//  section-title block above Professional Experience in the main column.
+// ─────────────────────────────────────────────────────────────────────────────
+#two-col(
+
+  // ── MAIN COLUMN ────────────────────────────────────────────────────────────
+  [
+
+    // ── Education first (recommended for SS / EA format) ─────────────────────
+    #section-title[Education]
+
+    #edu("Degree · Field of Study", "University or Institution Name", "City, Country", "2012 — 2016")
+    #edu("Diploma or Certificate", "Institution Name", "City, Country", "2009 — 2011")
+
+    // ── Professional Experience ───────────────────────────────────────────────
+    #section-title[Professional Experience]
+
+    #entry(
+      "Job Title",
+      "Organization / Employer",
+      "City, Country",
+      "2020 — Present",
+      (
+        [Describe your main responsibility — lead with a strong action verb and focus on outcomes.],
+        [Quantify where possible: managed a team of #text(weight: "bold")[X staff], served #text(weight: "bold")[Y beneficiaries], covered #text(weight: "bold")[Z districts].],
+        [Highlight any programs, tools, or systems you used or built.],
+      )
+    )
+
+    #entry(
+      "Earlier Job Title",
+      "Organization / Employer",
+      "City, Country",
+      "2016 — 2020",
+      (
+        [Describe what you did and the difference it made.],
+        [Mention relevant projects, stakeholders, or geographic coverage.],
+      )
+    )
+
+    // ── Research & Publications (shown only when toggle is true) ───────────────
+    #if include-publications [
+      #section-title[Research & Publications]
+
+      #pub-entry(
+        "Title of Paper, Report, or Article",
+        "Lastname, F., Co-Author, A.",
+        "Journal, Publisher, or Organization",
+        "2024",
+      )
+    ]
+
+    // ── Volunteer & Community Work ─────────────────────────────────────────────
+    #section-title[Volunteer & Community Work]
+
+    #entry(
+      "Role or Contribution",
+      "Organization or Initiative",
+      "City, Country",
+      "2022 — Present",
+      (
+        [Describe community, mentorship, or civic contributions.],
+      )
+    )
+  ],
+
+  // ── SIDEBAR ────────────────────────────────────────────────────────────────
+  [
+
+    // ── Key Skills ────────────────────────────────────────────────────────────
+    #sidebar-title[Key Skills]
+
+    #v(0.1em)
+    #set list(indent: 0pt, body-indent: 0.35em, marker: text(fill: pystatr-gold)[▪])
+    - #text(size: 8.5pt)[Skill area one]
+    - #text(size: 8.5pt)[Skill area two]
+    - #text(size: 8.5pt)[Skill area three]
+    - #text(size: 8.5pt)[Skill area four]
+
+    // ── Languages ─────────────────────────────────────────────────────────────
+    // Languages are a PROMINENT section in South Sudan / East Africa CVs.
+    // List spoken and written proficiency levels clearly.
+    #sidebar-title[Languages]
+
+    #v(0.1em)
+    - #text(size: 8.5pt)[English — Fluent (written & spoken)]
+    - #text(size: 8.5pt)[Arabic — Conversational]
+    - #text(size: 8.5pt)[Dinka / Nuer / Bari — Mother tongue]
+    - #text(size: 8.5pt)[Swahili — Basic]
+
+    // ── Tools & Technology ────────────────────────────────────────────────────
+    #sidebar-title[Tools & Technology]
+
+    #v(0.1em)
+    - #text(size: 8.5pt)[Microsoft Office Suite]
+    - #text(size: 8.5pt)[Data tool · Reporting tool]
+    - #text(size: 8.5pt)[Other relevant software]
+
+    // ── Certifications & Training ─────────────────────────────────────────────
+    #sidebar-title[Certifications]
+
+    #v(0.1em)
+    - #text(size: 8.5pt)[Certificate Name — Issuing Body, Year]
+    - #text(size: 8.5pt)[Training Program — Organization, Year]
+
+    // ── Awards & Recognition ──────────────────────────────────────────────────
+    #sidebar-title[Awards]
+
+    #award("Award Name · Year", "Issuing organization — one-line context")
+
+    // ── References ────────────────────────────────────────────────────────────
+    // References are typically included (or "available on request") in
+    // South Sudan / East Africa CVs. List 2–3 professional referees.
+    #sidebar-title[References]
+
+    #v(0.1em)
+    #set text(size: 8.0pt, fill: pystatr-ink)
+    #text(weight: "bold")[Referee Name] \
+    #text(fill: pystatr-mute)[Title, Organization] \
+    #text(fill: pystatr-mute)[Phone: +XXX XXX XXX XXX] \
+    #text(fill: pystatr-mute)[Email: referee@org.com]
+
+    #v(0.4em)
+    #text(weight: "bold")[Second Referee Name] \
+    #text(fill: pystatr-mute)[Title, Organization] \
+    #text(fill: pystatr-mute)[Phone: +XXX XXX XXX XXX] \
+    #text(fill: pystatr-mute)[Email: referee2@org.com]
+  ],
+)
+```
