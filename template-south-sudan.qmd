@@ -174,13 +174,13 @@ format:
     #text(weight: "bold")[Referee Name] \
     #text(fill: pystatr-mute)[Title, Organization] \
     #text(fill: pystatr-mute)[Phone: +XXX XXX XXX XXX] \
-    #text(fill: pystatr-mute)[Email: referee@org.com]
+    #text(fill: pystatr-mute)[Email: referee\@org.com]
 
     #v(0.4em)
     #text(weight: "bold")[Second Referee Name] \
     #text(fill: pystatr-mute)[Title, Organization] \
     #text(fill: pystatr-mute)[Phone: +XXX XXX XXX XXX] \
-    #text(fill: pystatr-mute)[Email: referee2@org.com]
+    #text(fill: pystatr-mute)[Email: referee2\@org.com]
   ],
 )
 ```

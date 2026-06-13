@@ -187,7 +187,7 @@
   updated: none,
   paper: "us-letter",
   fontsize: 9.7pt,
-  body-font: ("DejaVu Sans", "Helvetica", "Arial"),
+  body-font: ("Helvetica Neue", "Helvetica", "Arial", "Liberation Sans"),
   doc,
 ) = {
   set page(
