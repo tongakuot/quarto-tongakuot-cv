@@ -3,7 +3,7 @@
 # East African worked example. Built on the same cv-typst extension as
 # template.qmd and template-south-sudan.qmd. Content is a real-world style
 # example (theology / community-development profile) you can copy and overwrite.
-name: Akoch Elijah
+name: 
 headline: Christian Leader · Mentor · Theology & Community Development
 tagline: >-
   A born-again Christian passionate about transforming lives through trained
@@ -11,8 +11,8 @@ tagline: >-
   and a teacher's heart.
 
 # ── CONTACT ───────────────────────────────────────────────────────────────────
-email: akochelijah@gmail.com
-phone: "+211 929 297 779"
+email: 
+phone: ""
 location: Bor, Jonglei State, South Sudan
 
 # Optional online presence (add the lines you use)
