@@ -1,19 +1,20 @@
 ---
+# ── EAST AFRICA CV TEMPLATE (cv-typst) ────────────────────────────────────────
+# Blank, fillable template built on the same cv-typst extension as template.qmd
+# and template-south-sudan.qmd. Replace every [placeholder] with your details.
+# A rendered worked example lives in _output/template-east-africa.pdf.
+
 # ── IDENTITY ──────────────────────────────────────────────────────────────────
-# East African worked example. Built on the same cv-typst extension as
-# template.qmd and template-south-sudan.qmd. Content is a real-world style
-# example (theology / community-development profile) you can copy and overwrite.
-name: 
-headline: Christian Leader · Mentor · Theology & Community Development
+name: Your Full Name
+headline: Your Professional Title · Field · Area of Expertise
 tagline: >-
-  A born-again Christian passionate about transforming lives through trained
-  and coached leaders — pairing servant leadership with practical management
-  and a teacher's heart.
+  One-sentence positioning statement that appears under your headline —
+  who you are, what you do, and the value you bring.
 
 # ── CONTACT ───────────────────────────────────────────────────────────────────
-email: 
-phone: ""
-location: Bor, Jonglei State, South Sudan
+email: you@example.com
+phone: "+211 9XX XXX XXX"
+location: City, Country
 
 # Optional online presence (add the lines you use)
 # linkedin: linkedin.com/in/your-handle
@@ -21,13 +22,13 @@ location: Bor, Jonglei State, South Sudan
 # ── EAST AFRICA PERSONAL DETAILS ──────────────────────────────────────────────
 # Standard on CVs across South Sudan, Kenya, Uganda, Tanzania, and Ethiopia.
 # Remove any field you prefer to omit; add dob / sex / marital-status as needed.
-nationality: South Sudanese
-region: Jonglei State
-religion: Christian
+nationality: Your Nationality
+region: State / Region of Origin
+religion: Your Religion        # optional — include if relevant to the role
 
 # ── FORMAT ────────────────────────────────────────────────────────────────────
-papersize: a4                        # A4 is standard across East Africa
-resume-updated: June 2026
+papersize: a4                  # A4 is standard across East Africa
+resume-updated: Month Year
 format:
   cv-typst: default
 ---
@@ -39,18 +40,20 @@ format:
 #let include-publications = false
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  PROFESSIONAL PROFILE
+//  PROFESSIONAL PROFILE  (keep to 3–4 lines)
 // ─────────────────────────────────────────────────────────────────────────────
 #summary-block[
-  A born-again Christian leader with experience spanning
-  #text(weight: "bold", fill: pystatr-blue)[mentorship, teaching, and branch management].
-  A lifelong quick learner who values teamwork and excellence, adapts easily to
-  new environments, and seeks to contribute servant leadership and
-  #text(weight: "bold", fill: pystatr-gold)[community transformation] to a mission-driven organization.
+  Briefly describe your professional identity, years of experience, and the
+  #text(weight: "bold", fill: pystatr-blue)[sectors or domains] you work in.
+  Mention one or two signature strengths and the kind of impact you create,
+  then end with what you seek or can contribute to a
+  #text(weight: "bold", fill: pystatr-gold)[mission-driven organization].
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  TWO-COLUMN BODY
+//  Tip: for government / NGO / academic roles, move the Education section-title
+//  block above Professional Experience.
 // ─────────────────────────────────────────────────────────────────────────────
 #two-col(
 
@@ -60,56 +63,32 @@ format:
     #section-title[Professional Experience]
 
     #entry(
-      "Volunteer Mentor — 50 Days Discipleship",
-      "Discipleship Program",
-      "Bor, South Sudan",
-      "Jan 2023 — Present",
+      "Job Title",
+      "Organization / Employer",
+      "City, Country",
+      "Start — End",
       (
-        [Guide learners through the program and respond to their questions throughout the course.],
-        [Apply #text(weight: "bold")[varied teaching methods] to make complex material easy to understand.],
-        [Mark examinations and issue certificates to learners on completion.],
+        [Lead with a strong action verb and focus on the outcome you delivered.],
+        [Quantify where possible: managed #text(weight: "bold")[X staff], served #text(weight: "bold")[Y beneficiaries], covered #text(weight: "bold")[Z districts].],
+        [Highlight a program, tool, or system you used, built, or improved.],
       )
     )
 
     #entry(
-      "Branch Manager",
-      "MTN South Sudan — Bor Branch",
-      "Bor, South Sudan",
-      "Jul 2019 — Jan 2021",
+      "Earlier Job Title",
+      "Organization / Employer",
+      "City, Country",
+      "Start — End",
       (
-        [Coordinated daily branch operations and #text(weight: "bold")[community marketing outreach].],
-        [Prepared and delivered daily, weekly, monthly, and annual performance reports.],
-        [Led the branch team and oversaw the #text(weight: "bold")[safe banking of branch finances].],
-      )
-    )
-
-    #entry(
-      "Teacher",
-      "The Mission Gardens of Christ (MGC)",
-      "South Sudan",
-      "Feb 2019 — May 2019",
-      (
-        [Taught CRE and English to upper-primary students.],
-        [Organized weekly student orientation as teacher on duty and mentored children.],
-      )
-    )
-
-    #entry(
-      "Secretary",
-      "Makol-Chuei Zone Pentecostal Church",
-      "Jonglei State",
-      "Jan 2016 — Jan 2018",
-      (
-        [Recorded and maintained clear minutes and records of zone meetings and activities.],
-        [Prepared monthly zone reports, compiled member-church reports, and supported zone secretaries.],
+        [Describe what you did and the difference it made.],
+        [Mention relevant projects, stakeholders, or geographic coverage.],
       )
     )
 
     #section-title[Education]
 
-    #edu("Diploma · Bible & Theology", "Kaimosi Bible College", "Kaimosi, Kenya", "Graduating Nov 2024")
-    #edu("Bachelor · Biblical Studies & Community Development", "Nation 2 Nation Christian University — Bor Campus", "Bor, South Sudan", "2019")
-    #edu("O-Level Certificate (CSE) · Avg 86.9%", "Langbaar Modern Academy", "South Sudan", "2019")
+    #edu("Degree · Field of Study", "University or Institution", "City, Country", "Start — End")
+    #edu("Diploma or Certificate", "Institution", "City, Country", "Year")
 
     // ── Research & Publications (shown only when toggle is true) ───────────────
     #if include-publications [
@@ -119,7 +98,7 @@ format:
         "Title of Paper, Report, or Article",
         "Lastname, F., Co-Author, A.",
         "Journal, Publisher, or Organization",
-        "2024",
+        "Year",
       )
     ]
 
@@ -127,10 +106,9 @@ format:
 
     #v(0.15em)
     #set list(indent: 0.6em, body-indent: 0.4em, marker: text(fill: pystatr-gold)[▸])
-    - Representative, #text(weight: "bold")[FCA South Sudan].
-    - Former #text(weight: "bold")[President of Students], Kaimosi Bible College.
-    - Former Minister of Children's Ministry / Sunday School, Sudan Pentecostal Churches, Jonglei State.
-    - Active preacher of God's word for the transformation of communities.
+    - Leadership role or contribution — #text(weight: "bold")[Organization].
+    - Volunteer, civic, or mentorship role and its impact.
+    - Membership, representation, or recognition relevant to your field.
   ],
 
   // ── SIDEBAR ────────────────────────────────────────────────────────────────
@@ -140,55 +118,48 @@ format:
 
     #v(0.1em)
     #set list(indent: 0pt, body-indent: 0.35em, marker: text(fill: pystatr-gold)[▪])
-    - #text(size: 8.5pt)[Communication & leadership]
-    - #text(size: 8.5pt)[Counselling & mentorship]
-    - #text(size: 8.5pt)[Team building]
-    - #text(size: 8.5pt)[Creative problem-solving]
-    - #text(size: 8.5pt)[Organization & planning]
-    - #text(size: 8.5pt)[Essential computer skills]
+    - #text(size: 8.5pt)[Skill area one]
+    - #text(size: 8.5pt)[Skill area two]
+    - #text(size: 8.5pt)[Skill area three]
+    - #text(size: 8.5pt)[Skill area four]
+    - #text(size: 8.5pt)[Skill area five]
 
     // ── Languages — a prominent section in East African CVs ───────────────────
     #sidebar-title[Languages]
 
     #v(0.1em)
-    - #text(size: 8.5pt)[English — Fluent (written & spoken)]
-    - #text(size: 8.5pt)[Dinka — Mother tongue]
-    - #text(size: 8.5pt)[Juba Arabic — Conversational]
+    - #text(size: 8.5pt)[Language — Fluent (written & spoken)]
+    - #text(size: 8.5pt)[Mother tongue — Native]
+    - #text(size: 8.5pt)[Language — Conversational]
 
     #sidebar-title[Tools & Technology]
 
     #v(0.1em)
-    - #text(size: 8.5pt)[Microsoft Office Suite]
-    - #text(size: 8.5pt)[Reporting & record-keeping]
+    - #text(size: 8.5pt)[Tool or software]
+    - #text(size: 8.5pt)[Tool or software]
 
     #sidebar-title[Interests]
 
     #v(0.1em)
-    - #text(size: 8.5pt)[Reading & languages]
-    - #text(size: 8.5pt)[Lifelong learning]
-    - #text(size: 8.5pt)[Studying scripture]
+    - #text(size: 8.5pt)[Interest one]
+    - #text(size: 8.5pt)[Interest two]
+    - #text(size: 8.5pt)[Interest three]
 
     // ── References — typically listed in full in East African CVs ─────────────
     #sidebar-title[References]
 
     #v(0.1em)
     #set text(size: 8.0pt, fill: pystatr-ink)
-    #text(weight: "bold")[Dr. Isaiah Majok Dau] \
-    #text(fill: pystatr-mute)[Writer, Preacher & Teacher] \
-    #text(fill: pystatr-mute)[Phone: +211 915 175 468] \
-    #text(fill: pystatr-mute)[Email: isaiahmajokdau\@gmail.com]
+    #text(weight: "bold")[Referee Full Name] \
+    #text(fill: pystatr-mute)[Title, Organization] \
+    #text(fill: pystatr-mute)[Phone: +XXX XXX XXX XXX] \
+    #text(fill: pystatr-mute)[Email: referee\@org.com]
 
     #v(0.35em)
-    #text(weight: "bold")[Pastor Enoch Burundi] \
-    #text(fill: pystatr-mute)[Principal, Kaimosi Bible College] \
-    #text(fill: pystatr-mute)[Phone: +254 721 454 648] \
-    #text(fill: pystatr-mute)[Email: eburudi\@gmail.com]
-
-    #v(0.35em)
-    #text(weight: "bold")[Mr. Kuany Majok Mayen] \
-    #text(fill: pystatr-mute)[Regional Sales Developer, MTN South Sudan] \
-    #text(fill: pystatr-mute)[Phone: +211 922 904 995] \
-    #text(fill: pystatr-mute)[Email: aliansesmajok\@gmail.com]
+    #text(weight: "bold")[Second Referee Name] \
+    #text(fill: pystatr-mute)[Title, Organization] \
+    #text(fill: pystatr-mute)[Phone: +XXX XXX XXX XXX] \
+    #text(fill: pystatr-mute)[Email: referee2\@org.com]
   ],
 )
 ```
